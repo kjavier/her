@@ -180,6 +180,7 @@ module Her
         # @param [Array] parsed_data
         # @private
         def new_collection(parsed_data)
+          parsed_data = parsed_data.with_indifferent_access
           Her::Model::Attributes.initialize_collection(self, parsed_data)
         end
 
